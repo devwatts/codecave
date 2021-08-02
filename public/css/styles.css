@@ -12,11 +12,11 @@ pre {
     padding: 2rem;
     margin-top: 1rem;
     margin-bottom: 3rem;
-    white-space: pre-wrap;
+    /*white-space: pre-wrap;*/
 }
 
 pre code {
-    white-space: pre-wrap;
+    /*white-space: pre-wrap;*/
     font-family: var(--font-mono);
     font-size: 14px;
 }
