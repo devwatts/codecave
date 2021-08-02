@@ -155,7 +155,7 @@ for(let index = 0; index<languagesSupported.length;index++){
    document.getElementById('language').appendChild(option);
 }
 
-document.getElementById('code').addEventListener('paste', function(e) {
+/*document.getElementById('code').addEventListener('paste', function(e) {
     e.preventDefault();
     var text = '';
     if (e.clipboardData || e.originalEvent.clipboardData) {
@@ -168,7 +168,7 @@ document.getElementById('code').addEventListener('paste', function(e) {
     } else {
       document.execCommand('paste', false, text);
     }
-});
+});*/
 
 var codeFormatted;
 async function sendCode(){

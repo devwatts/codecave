@@ -100,7 +100,7 @@ body {
     /*height: fit-content; */
     width: 100%;
     /*resize: none;*/
-    border: 2px solid black;
+    border: none;
     font-size: 18px;
     font-family: 'Anonymous Pro', monospace;
 }
