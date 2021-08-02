@@ -370,4 +370,8 @@ select {
     .about-ptag{
         font-size: 16px;
     }
+    pre {
+    
+        padding: 1rem .5rem;
+    }
 }
