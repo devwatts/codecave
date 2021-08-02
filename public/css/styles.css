@@ -97,9 +97,9 @@ body {
 }
 
 .code-editor-textarea{
-    height: fit-content; 
+    /*height: fit-content; */
     width: 100%;
-    resize: none;
+    /*resize: none;*/
     border: 2px solid black;
     font-size: 18px;
     font-family: 'Anonymous Pro', monospace;
