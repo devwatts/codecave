@@ -83,7 +83,7 @@ body {
     max-width: 700px;
     max-height: fit-content;
     font-size: 18px;
-    /*background-color: #fdfdfd;*/
+    background-color: #fdfdfd;
     border-radius: 2px;
     border: none;
     overflow: auto;
