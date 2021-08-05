@@ -148,13 +148,15 @@ particlesJS('particles-js', {
 });
 
 
-for(let index = 0; index<languagesSupported.length;index++){
-   var option =  document.createElement('option');
-   option.setAttribute("value",languagesSupported[index]);
-   option.innerHTML = languagesSupported[index];
-   document.getElementById('language').appendChild(option);
+function languageAdder(){
+    for(let index = 0; index<languagesSupported.length;index++){
+        var option =  document.createElement('option');
+        option.setAttribute("value",languagesSupported[index]);
+        option.innerHTML = languagesSupported[index];
+        document.getElementById('language').appendChild(option);
+     }
+     
 }
-
 /*document.getElementById('code').addEventListener('paste', function(e) {
     e.preventDefault();
     var text = '';
@@ -175,7 +177,29 @@ async function sendCode(){
     console.log(document.getElementById('code').value);
     var rawCode = document.getElementById('code').value;
     var language = document.getElementById('language').value;
+    var expiry = document.getElementById('expiry').value;
     await codeHighlight(rawCode, language);
+        //document.getElementById('loader').style.display = "block";
+        let json = {
+            raw_code:rawCode,
+            formatted_code:codeFormatted,
+            expiry:expiry
+        }
+        
+        const Http = new XMLHttpRequest();
+        const url = 'https://newcodecave.herokuapp.com/addCode';
+        Http.open("POST", url);
+        Http.setRequestHeader('Content-Type', 'application/json');
+        Http.send(JSON.stringify(json));
+        Http.onload = function () {
+            //document.getElementById('loader').style.display = "none";
+            var data = JSON.parse(this.response);
+            console.log(data);
+            if(data.error == ""){
+                document.location.href = data.url;
+            }
+        }
+            
 }
 
 async function codeHighlight(code2,language){
@@ -187,7 +211,11 @@ async function codeHighlight(code2,language){
     .then(highlighter => {
         console.log('came here 2');
       codeFormatted = highlighter.codeToHtml(code2, language);
-      console.log(codeFormatted);
-
+      //console.log(codeFormatted);
     })
+  }
+
+
+  function getLinkData(){
+      console.log(location.href);
   }

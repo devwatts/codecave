@@ -14,7 +14,7 @@
    
 </head>
 
-<body>
+<body onload="languageAdder();">
     <div id="main-content" class="main-wrapper">
         <div class="circles" id="circles">
             <div class="circle"></div>
@@ -47,6 +47,14 @@
 
                 <select name="language" id="language">
                     
+                </select>
+            </div>
+            <div class="expire">
+                <label style="font-weight: bolder;" for="expire">Link duration:</label>
+                <select name="expire" id="expiry">
+                    <option value="7">Default (7 Days)</option>
+                    <option value="1">24 hours</option>
+                    <option value="null">Never</option>
                 </select>
             </div>
             <div class="submit-container">

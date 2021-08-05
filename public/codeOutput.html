@@ -14,7 +14,7 @@
     
 </head>
 
-<body>
+<body onload="getLinkData();">
     <div id="main-wrapper" class="main-wrapper">
         <div class="circles" id="circles">
             <div class="circle"></div>
@@ -38,63 +38,9 @@
 
         </div>
         <div class="code-output" id="code-output">
-            <div class="code-snippet"><pre class="shiki" style="background-color: #1f1f1f"><code><span class="line"><span style="color: #B392F0"> </span><span style="color: #F97583">async</span><span style="color: #B392F0"> </span><span style="color: #F97583">function</span><span style="color: #B392F0"> codeHighlight(code2){</span></span>
-                <span class="line"><span style="color: #B392F0">        </span><span style="color: #79B8FF">console</span><span style="color: #B392F0">.log(</span><span style="color: #FFAB70">'came here'</span><span style="color: #B392F0">);</span></span>
-                <span class="line"><span style="color: #B392F0">       </span><span style="color: #F97583">await</span><span style="color: #B392F0"> shiki</span></span>
-                <span class="line"><span style="color: #B392F0">        .getHighlighter({</span></span>
-                <span class="line"><span style="color: #B392F0">          theme</span><span style="color: #F97583">:</span><span style="color: #B392F0"> </span><span style="color: #FFAB70">'min-dark'</span></span>
-                <span class="line"><span style="color: #B392F0">        })</span></span>
-                <span class="line"><span style="color: #B392F0">        .then(highlighter </span><span style="color: #F97583">=&gt;</span><span style="color: #B392F0"> {</span></span>
-                <span class="line"><span style="color: #B392F0">            </span><span style="color: #79B8FF">console</span><span style="color: #B392F0">.log(</span><span style="color: #FFAB70">'came here 2'</span><span style="color: #B392F0">);</span></span>
-                <span class="line"><span style="color: #B392F0">          codeFormatted </span><span style="color: #F97583">=</span><span style="color: #B392F0"> </span><span style="color: #79B8FF">highlighter</span><span style="color: #B392F0">.codeToHtml(code2, </span><span style="color: #FFAB70">'js'</span><span style="color: #B392F0">);</span></span>
-                <span class="line"><span style="color: #B392F0">          </span><span style="color: #79B8FF">console</span><span style="color: #B392F0">.log(codeFormatted);</span></span>
-                <span class="line"><span style="color: #B392F0">        })</span></span>
-                <span class="line"><span style="color: #B392F0">      } </span><span style="color: #F97583">async</span><span style="color: #B392F0"> </span><span style="color: #F97583">function</span><span style="color: #B392F0"> codeHighlight(code2){</span></span>
-                <span class="line"><span style="color: #B392F0">        </span><span style="color: #79B8FF">console</span><span style="color: #B392F0">.log(</span><span style="color: #FFAB70">'came here'</span><span style="color: #B392F0">);</span></span>
-                <span class="line"><span style="color: #B392F0">       </span><span style="color: #F97583">await</span><span style="color: #B392F0"> shiki</span></span>
-                <span class="line"><span style="color: #B392F0">        .getHighlighter({</span></span>
-                <span class="line"><span style="color: #B392F0">          theme</span><span style="color: #F97583">:</span><span style="color: #B392F0"> </span><span style="color: #FFAB70">'min-dark'</span></span>
-                <span class="line"><span style="color: #B392F0">        })</span></span>
-                <span class="line"><span style="color: #B392F0">        .then(highlighter </span><span style="color: #F97583">=&gt;</span><span style="color: #B392F0"> {</span></span>
-                <span class="line"><span style="color: #B392F0">            </span><span style="color: #79B8FF">console</span><span style="color: #B392F0">.log(</span><span style="color: #FFAB70">'came here 2'</span><span style="color: #B392F0">);</span></span>
-                <span class="line"><span style="color: #B392F0">          codeFormatted </span><span style="color: #F97583">=</span><span style="color: #B392F0"> </span><span style="color: #79B8FF">highlighter</span><span style="color: #B392F0">.codeToHtml(code2, </span><span style="color: #FFAB70">'js'</span><span style="color: #B392F0">);</span></span>
-                <span class="line"><span style="color: #B392F0">          </span><span style="color: #79B8FF">console</span><span style="color: #B392F0">.log(codeFormatted);</span></span>
-                <span class="line"><span style="color: #B392F0">        })</span></span>
-                <span class="line"><span style="color: #B392F0">      } </span><span style="color: #F97583">async</span><span style="color: #B392F0"> </span><span style="color: #F97583">function</span><span style="color: #B392F0"> codeHighlight(code2){</span></span>
-                <span class="line"><span style="color: #B392F0">        </span><span style="color: #79B8FF">console</span><span style="color: #B392F0">.log(</span><span style="color: #FFAB70">'came here'</span><span style="color: #B392F0">);</span></span>
-                <span class="line"><span style="color: #B392F0">       </span><span style="color: #F97583">await</span><span style="color: #B392F0"> shiki</span></span>
-                <span class="line"><span style="color: #B392F0">        .getHighlighter({</span></span>
-                <span class="line"><span style="color: #B392F0">          theme</span><span style="color: #F97583">:</span><span style="color: #B392F0"> </span><span style="color: #FFAB70">'min-dark'</span></span>
-                <span class="line"><span style="color: #B392F0">        })</span></span>
-                <span class="line"><span style="color: #B392F0">        .then(highlighter </span><span style="color: #F97583">=&gt;</span><span style="color: #B392F0"> {</span></span>
-                <span class="line"><span style="color: #B392F0">            </span><span style="color: #79B8FF">console</span><span style="color: #B392F0">.log(</span><span style="color: #FFAB70">'came here 2'</span><span style="color: #B392F0">);</span></span>
-                <span class="line"><span style="color: #B392F0">          codeFormatted </span><span style="color: #F97583">=</span><span style="color: #B392F0"> </span><span style="color: #79B8FF">highlighter</span><span style="color: #B392F0">.codeToHtml(code2, </span><span style="color: #FFAB70">'js'</span><span style="color: #B392F0">);</span></span>
-                <span class="line"><span style="color: #B392F0">          </span><span style="color: #79B8FF">console</span><span style="color: #B392F0">.log(codeFormatted);</span></span>
-                <span class="line"><span style="color: #B392F0">        })</span></span>
-                <span class="line"><span style="color: #B392F0">      } </span><span style="color: #F97583">async</span><span style="color: #B392F0"> </span><span style="color: #F97583">function</span><span style="color: #B392F0"> codeHighlight(code2){</span></span>
-                <span class="line"><span style="color: #B392F0">        </span><span style="color: #79B8FF">console</span><span style="color: #B392F0">.log(</span><span style="color: #FFAB70">'came here'</span><span style="color: #B392F0">);</span></span>
-                <span class="line"><span style="color: #B392F0">       </span><span style="color: #F97583">await</span><span style="color: #B392F0"> shiki</span></span>
-                <span class="line"><span style="color: #B392F0">        .getHighlighter({</span></span>
-                <span class="line"><span style="color: #B392F0">          theme</span><span style="color: #F97583">:</span><span style="color: #B392F0"> </span><span style="color: #FFAB70">'min-dark'</span></span>
-                <span class="line"><span style="color: #B392F0">        })</span></span>
-                <span class="line"><span style="color: #B392F0">        .then(highlighter </span><span style="color: #F97583">=&gt;</span><span style="color: #B392F0"> {</span></span>
-                <span class="line"><span style="color: #B392F0">            </span><span style="color: #79B8FF">console</span><span style="color: #B392F0">.log(</span><span style="color: #FFAB70">'came here 2'</span><span style="color: #B392F0">);</span></span>
-                <span class="line"><span style="color: #B392F0">          codeFormatted </span><span style="color: #F97583">=</span><span style="color: #B392F0"> </span><span style="color: #79B8FF">highlighter</span><span style="color: #B392F0">.codeToHtml(code2, </span><span style="color: #FFAB70">'js'</span><span style="color: #B392F0">);</span></span>
-                <span class="line"><span style="color: #B392F0">          </span><span style="color: #79B8FF">console</span><span style="color: #B392F0">.log(codeFormatted);</span></span>
-                <span class="line"><span style="color: #B392F0">        })</span></span>
-                <span class="line"><span style="color: #B392F0">      } </span><span style="color: #F97583">async</span><span style="color: #B392F0"> </span><span style="color: #F97583">function</span><span style="color: #B392F0"> codeHighlight(code2){</span></span>
-                <span class="line"><span style="color: #B392F0">        </span><span style="color: #79B8FF">console</span><span style="color: #B392F0">.log(</span><span style="color: #FFAB70">'came here'</span><span style="color: #B392F0">);</span></span>
-                <span class="line"><span style="color: #B392F0">       </span><span style="color: #F97583">await</span><span style="color: #B392F0"> shiki</span></span>
-                <span class="line"><span style="color: #B392F0">        .getHighlighter({</span></span>
-                <span class="line"><span style="color: #B392F0">          theme</span><span style="color: #F97583">:</span><span style="color: #B392F0"> </span><span style="color: #FFAB70">'min-dark'</span></span>
-                <span class="line"><span style="color: #B392F0">        })</span></span>
-                <span class="line"><span style="color: #B392F0">        .then(highlighter </span><span style="color: #F97583">=&gt;</span><span style="color: #B392F0"> {</span></span>
-                <span class="line"><span style="color: #B392F0">            </span><span style="color: #79B8FF">console</span><span style="color: #B392F0">.log(</span><span style="color: #FFAB70">'came here 2'</span><span style="color: #B392F0">);</span></span>
-                <span class="line"><span style="color: #B392F0">          codeFormatted </span><span style="color: #F97583">=</span><span style="color: #B392F0"> </span><span style="color: #79B8FF">highlighter</span><span style="color: #B392F0">.codeToHtml(code2, </span><span style="color: #FFAB70">'js'</span><span style="color: #B392F0">);</span></span>
-                <span class="line"><span style="color: #B392F0">          </span><span style="color: #79B8FF">console</span><span style="color: #B392F0">.log(codeFormatted);</span></span>
-                <span class="line"><span style="color: #B392F0">        })</span></span>
-                <span class="line"><span style="color: #B392F0">      }</span></span></code></pre></div>
-        </div>
+            <div class="code-snippet" id="code-output-final">
+                
+            </div>
         
     </div>
     <!-- particles.js container -->
