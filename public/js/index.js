@@ -218,7 +218,7 @@ async function codeHighlight(code2,language){
 
   function getLinkData(){
       console.log(location.href);
-      var link = location.href.split('/');
+      var link = location.href.split('/')[3];
       const Http = new XMLHttpRequest();
       const url = 'https://newcodecave.herokuapp.com/'+link;
       Http.open("GET", url);
