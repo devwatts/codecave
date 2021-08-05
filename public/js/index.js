@@ -154,6 +154,7 @@ function languageAdder(){
         option.setAttribute("value",languagesSupported[index]);
         option.innerHTML = languagesSupported[index];
         document.getElementById('language').appendChild(option);
+        document.getElementById('loader').style.display = "none";
      }
      
 }
@@ -174,11 +175,12 @@ function languageAdder(){
 
 var codeFormatted;
 async function sendCode(){
+    document.getElementById('loader').style.display = "block";
     console.log(document.getElementById('code').value);
     var rawCode = document.getElementById('code').value;
     var language = document.getElementById('language').value;
     var expiry = document.getElementById('expiry').value;
-        //document.getElementById('loader').style.display = "block";
+        
         let json = {
             raw_code:rawCode,
             language:language,
@@ -195,6 +197,7 @@ async function sendCode(){
             var data = JSON.parse(this.response);
             console.log(data);
             if(data.error == ""){
+                document.getElementById('loader').style.display = "none";
                 document.location.href = data.url;
             }
         }
@@ -228,6 +231,7 @@ async function codeHighlight(code2,language){
           var data = JSON.parse(this.response);
           console.log(data.data);
             if(data.error == ""){
+                    document.getElementById('loader').style.display = "none";
                     document.getElementById('output-link').innerHTML = location.href;
                     document.getElementById('output-link').setAttribute("href",location.href);
                     document.getElementById('code-output-final').innerHTML = data.data.code.formatted_html;
