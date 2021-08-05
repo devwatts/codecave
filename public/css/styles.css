@@ -239,6 +239,7 @@ select {
 }
 #output-link{
     color: white;
+    word-break: break-word;
 }
 .bounce {
     -moz-animation: bounce 2s infinite;
