@@ -218,4 +218,18 @@ async function codeHighlight(code2,language){
 
   function getLinkData(){
       console.log(location.href);
+      var link = location.href.split('/');
+      const Http = new XMLHttpRequest();
+      const url = 'https://newcodecave.herokuapp.com/'+link;
+      Http.open("GET", url);
+      Http.setRequestHeader('Content-Type', 'application/json');
+      Http.send();
+      Http.onload = function () {
+          //document.getElementById('loader').style.display = "none";
+          var data = JSON.parse(this.response);
+          console.log(data.data);
+            if(data.error == ""){
+                    document.getElementById('code-output-final').innerHTML = data.data.code.formatted_html;
+            }
+      }   
   }
