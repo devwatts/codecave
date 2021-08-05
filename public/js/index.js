@@ -178,11 +178,10 @@ async function sendCode(){
     var rawCode = document.getElementById('code').value;
     var language = document.getElementById('language').value;
     var expiry = document.getElementById('expiry').value;
-    await codeHighlight(rawCode, language);
         //document.getElementById('loader').style.display = "block";
         let json = {
             raw_code:rawCode,
-            formatted_code:codeFormatted,
+            language:language,
             expiry:expiry
         }
         
