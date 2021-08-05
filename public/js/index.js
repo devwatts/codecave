@@ -229,6 +229,8 @@ async function codeHighlight(code2,language){
           var data = JSON.parse(this.response);
           console.log(data.data);
             if(data.error == ""){
+                    document.getElementById('output-link').innerHTML = location.href;
+                    document.getElementById('output-link').setAttribute("href",location.href);
                     document.getElementById('code-output-final').innerHTML = data.data.code.formatted_html;
             }
       }   
