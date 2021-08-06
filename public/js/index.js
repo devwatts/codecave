@@ -239,3 +239,18 @@ async function codeHighlight(code2,language){
             }
       }   
   }
+  
+  function appStatus(){
+    document.getElementById('loader').style.display = "block";
+    const Http = new XMLHttpRequest();
+    const url = 'https://newcodecave.herokuapp.com';
+    Http.open("GET", url);
+    Http.setRequestHeader('Content-Type', 'application/json');
+    Http.send();
+    Http.onload = function () {
+        //document.getElementById('loader').style.display = "none";
+        var data = this.response;
+        console.log(data);
+        document.getElementById('loader').style.display = "none";   
+    }   
+  }
