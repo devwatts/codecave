@@ -249,6 +249,16 @@ async function sendCode(){
     }   
   }
 
-  function copyToClipBoard(){
-      alert("lol");
+async  function copyToClipBoard(){
+
+        var e = rawCodeRecieved;
+        t = document.createElement("textarea");
+        document.body.appendChild(t);
+        t.setAttribute("id", "dummy_id");
+        document.getElementById("dummy_id").value = e;
+        await t.select();
+        await document.execCommand("copy");
+        document.body.removeChild(t);
+        
+    
   }
