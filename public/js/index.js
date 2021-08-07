@@ -220,11 +220,16 @@ async function sendCode(){
           var data = JSON.parse(this.response);
           console.log(data.data);
             if(data.error == ""){
+                if(data.data != undefined){
                     document.getElementById('loader').style.display = "none";
                     document.getElementById('output-link').innerHTML = location.href;
                     document.getElementById('output-link').setAttribute("href",location.href);
                     document.getElementById('code-output-final').innerHTML = data.data.code.formatted_html;
                     rawCodeRecieved = data.data.code.raw_code;
+                }else{
+                    alert("Cant Find the given link");
+                }
+                    
             }
       }   
   }
@@ -242,4 +247,8 @@ async function sendCode(){
         console.log(data);
         document.getElementById('loader').style.display = "none";   
     }   
+  }
+
+  function copyToClipBoard(){
+      alert("lol");
   }

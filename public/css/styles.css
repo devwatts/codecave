@@ -256,6 +256,8 @@ select {
       fill: white;
       position: absolute;
         right: 5%;
+        margin-top: 10px;
+        cursor: pointer;
   }
   
 @keyframes bounce {
