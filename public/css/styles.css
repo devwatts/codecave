@@ -254,6 +254,8 @@ select {
   }
   .copyToClipboardSvg{
       fill: white;
+      position: absolute;
+        right: 5%;
   }
   
 @keyframes bounce {
@@ -403,6 +405,9 @@ select {
             margin-right: auto;
             display: block;
             font-size: 14px;
+    }
+    .code-output{
+        margin-top: 50%;
     }
 }
 @media only screen and (max-width: 700px) and (max-height: 490px) {
