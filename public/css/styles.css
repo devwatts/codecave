@@ -63,6 +63,7 @@ body {
     letter-spacing: 5px;
     text-align: center;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .about {
@@ -388,7 +389,6 @@ select {
     }
     .brand-name{
         margin-bottom: 10px;
-        cursor: pointer;
     }
     .about-ptag{
         padding: 10px;

@@ -259,6 +259,6 @@ async  function copyToClipBoard(){
         await t.select();
         await document.execCommand("copy");
         document.body.removeChild(t);
-        
-    
+        alert("Copied code to Clipboard!");
+
   }
