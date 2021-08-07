@@ -388,6 +388,7 @@ select {
     }
     .brand-name{
         margin-bottom: 10px;
+        cursor: pointer;
     }
     .about-ptag{
         padding: 10px;
