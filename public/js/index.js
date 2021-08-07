@@ -205,18 +205,6 @@ async function sendCode(){
             
 }
 
-async function codeHighlight(code2,language){
-    console.log('came here');
-   await shiki
-    .getHighlighter({
-      theme: 'min-dark'
-    })
-    .then(highlighter => {
-        console.log('came here 2');
-      codeFormatted = highlighter.codeToHtml(code2, language);
-      //console.log(codeFormatted);
-    })
-  }
 
 
   function getLinkData(){
@@ -236,6 +224,7 @@ async function codeHighlight(code2,language){
                     document.getElementById('output-link').innerHTML = location.href;
                     document.getElementById('output-link').setAttribute("href",location.href);
                     document.getElementById('code-output-final').innerHTML = data.data.code.formatted_html;
+                    rawCodeRecieved = data.data.code.raw_code;
             }
       }   
   }

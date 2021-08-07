@@ -246,6 +246,9 @@ select {
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
   }
+  .svg-container{
+      background-color: #1f1f1f;
+  }
   
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
