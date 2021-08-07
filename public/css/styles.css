@@ -10,7 +10,7 @@ pre {
     overflow: auto;
     overflow-wrap: break-word;
     padding: 2rem;
-    margin-top: 1rem;
+    /*margin-top: 1rem;*/
     margin-bottom: 3rem;
     /*white-space: pre-wrap;*/
 }
@@ -248,6 +248,12 @@ select {
   }
   .svg-container{
       background-color: #1f1f1f;
+      width: 95%;
+      font-size: 15px;
+      margin: auto;
+  }
+  .copyToClipboardSvg{
+      fill: white;
   }
   
 @keyframes bounce {
