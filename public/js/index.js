@@ -262,3 +262,20 @@ async  function copyToClipBoard(){
         alert("Copied code to Clipboard!");
 
   }
+
+  function testFile(){
+    var formdata = new FormData();
+  formdata.append("files", document.getElementById('testFile').files[0], "/path/to/file");
+formdata.append("lol", "lol");
+    var ajax = new XMLHttpRequest();
+    //ajax.upload.addEventListener("progress", progressHandler, false);
+    //ajax.addEventListener("load", completeHandler, false);
+    //ajax.addEventListener("error", errorHandler, false);
+    //ajax.addEventListener("abort", abortHandler, false);
+    ajax.open("POST", 'http://127.0.0.1:5000/testFile', true);//https://newcodecave.herokuapp.com/testFile
+    ajax.send(formdata);
+    ajax.onload = function () {
+        var data = JSON.parse(this.response);
+        console.log(data);
+    }
+  }

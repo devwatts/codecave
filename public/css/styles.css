@@ -157,6 +157,11 @@ select {
     align-content: center;
     
 }
+.image-input{
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
 .submit-container{
     
     align-items: center;
