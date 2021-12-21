@@ -272,7 +272,7 @@ formdata.append("lol", "lol");
     //ajax.addEventListener("load", completeHandler, false);
     //ajax.addEventListener("error", errorHandler, false);
     //ajax.addEventListener("abort", abortHandler, false);
-    ajax.open("POST", 'http://127.0.0.1:5000/testFile', true);//https://newcodecave.herokuapp.com/testFile
+    ajax.open("POST", 'https://newcodecave.herokuapp.com/testFile', true);//https://newcodecave.herokuapp.com/testFile
     ajax.send(formdata);
     ajax.onload = function () {
         var data = JSON.parse(this.response);
