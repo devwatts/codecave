@@ -16,7 +16,7 @@
         margin: 0;
         padding: 0;
     }
-
+    
     body {
         background-color: #ECEFF1;
         color: #2b2b2b;
@@ -52,6 +52,11 @@
     .about-toolcave p{
         text-align: center;
         font-size: 20px;
+        color: #ECEFF1;
+        -webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
     }
     .about-toolcave{
         
@@ -312,14 +317,16 @@
             document.querySelector('body').classList.add('nightMode');
             document.getElementById('sun-svg').classList.add('nightMode');
             document.getElementById('hand-svg').classList.add('nightMode');
-            document.getElementById('about-toolcave').setAttribute("style","background:#ECEFF1;color:#2b2b2b;")
+            document.getElementById('about-toolcave').setAttribute("style","background:#ECEFF1;")
+            document.getElementById('about-toolcave').children[0].setAttribute("style","color:#2b2b2b");
             }else{
                 nightMode = 0;
                 startParticles('#2b2b2b');
             document.querySelector('body').classList.remove('nightMode');
             document.getElementById('sun-svg').classList.remove('nightMode');
             document.getElementById('hand-svg').classList.remove('nightMode');
-            document.getElementById('about-toolcave').setAttribute("style","background:#2b2b2b;color:#ECEFF1;")
+            document.getElementById('about-toolcave').setAttribute("style","background:#2b2b2b;");
+            document.getElementById('about-toolcave').children[0].setAttribute("style","color:#ECEFF1");
             }
         });
         function setScale() {
