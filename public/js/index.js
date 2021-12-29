@@ -272,10 +272,21 @@ formdata.append("lol", "lol");
     //ajax.addEventListener("load", completeHandler, false);
     //ajax.addEventListener("error", errorHandler, false);
     //ajax.addEventListener("abort", abortHandler, false);
-    ajax.open("POST", 'https://newcodecave.herokuapp.com/testFile', true);//https://newcodecave.herokuapp.com/testFile
+    ajax.open("POST", 'http://localhost:5000/testFile', true);//https://newcodecave.herokuapp.com/testFile
     ajax.send(formdata);
     ajax.onload = function () {
         var data = JSON.parse(this.response);
         console.log(data);
     }
+  }
+  function okok(){
+    const Http = new XMLHttpRequest();
+    const url = 'http://localhost:5000/l2/lol';
+      Http.open("GET", url);
+      //Http.responseType = 'blob';
+      Http.send();
+      Http.onload  = function(){
+        var blob = this.response;
+        console.log(blob)
+      }
   }
