@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ECEFF1;
+    color: #2b2b2b;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.nightMode{
+    
+    background-color:#2b2b2b !important;
+    color : #ECEFF1 !important;
+    fill: #ECEFF1 !important;
+    
+}
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: -10;
+}
+
+.main-container {
+    display: block;
+    height: 100vh;
+}
+#sun{
+    cursor: pointer;
+}
+.about-toolcave p{
+    text-align: center;
+    font-size: 20px;
+    color: #ECEFF1;
+    -webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
+}
+.about-toolcave{
+    
+    padding: 15px;
+    border-radius: 20px;
+    background: #2b2b2b;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    height: 20%;
+    justify-content: space-evenly;
+}
+
+.nav-bar div:nth-child(2) {
+    position: absolute;
+    right: 10%;
+    fill: #2b2b2b;
+}
+
+.nav-bar div h1 {
+    font-size: 70px;
+}
+
+.nav-bar div h1 svg {
+    fill: #2b2b2b;
+}
+
+.menu-container {
+    display: flex;
+    height: 60%;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-box {
+    height: 100%;
+    width: 22%;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 10%), 0 4px 4px rgb(0 0 0 / 10%), 0 8px 8px rgb(0 0 0 / 10%), 0 16px 16px rgb(0 0 0 / 10%);
+    z-index: 22;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+.menu-box-1 {
+    background: #d10000;
+}
+
+.menu-box-2 {
+    background: #6784A1;
+}
+
+.menu-box-3 {
+    background: #114D22;
+}
+
+.menu-box-4 {
+    background: #222354;
+}
+
+.menu-svg {
+    fill: white;
+    margin-top: 10%;
+}
+
+.menu-text {
+    height: 50%;
+}
+
+.menu-box p {
+    font-size: 20px;
+    color: white;
+}
+
+.menu-box h1 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: white;
+}
+
+.menu-start-link {
+    margin-top: 10%;
+}
+
+.menu-start-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .nav-bar div h1 {
+        font-size: 50px;
+    }
+
+    .menu-container {
+        flex-wrap: wrap;
+    }
+
+    .menu-box {
+        width: 45%;
+        height: 40%;
+    }
+
+    .menu-svg {
+        margin-top: 0;
+    }
+
+    .menu-box h1 {
+        margin-top: 2%;
+        margin-bottom: 2%;
+
+    }
+
+    .nav-bar div:nth-child(2) {
+
+        right: 4%;
+
+    }
+    .menu-text p{
+        display: none;
+    }
+    .menu-start-link{
+        display: none;
+    }
+    .nav-bar{
+        height: 12%;
+    }
+    .about-toolcave{
+    margin: 10px;
+}
+
+}
+
+.code-share-container{
+    width: 100%;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 22221; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    height: 80%;
+    background-color: #e6e6e6e8;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
