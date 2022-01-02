@@ -1,8 +1,10 @@
 var languagesSupported = [  'c'  ,'cpp' ,'c#'  ,'css'  ,'dart'  ,'docker', 'html'  ,'java'  ,'javascript' ,'json'  ,'jsx'  ,'kotlin'  ,'lua'  ,'markdown'  ,'php' ,'python' ,'sass'  ,'shell' ,'bash'  ,'sql' ,'swift' ,'typescript', 'vue', 'xml'];
 var nightMode = 0;
+var buttonArray = ['files','message','image','code'];
 
 startParticles('#2b2b2b');
 languageAdder();
+addEventListeners();
 
 document.getElementById('sun').addEventListener("click",function(){
     if(nightMode == 0 ){
@@ -185,28 +187,40 @@ function languageAdder(){
      }
 }
 
-
-var modal = document.getElementById("codeModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+function addEventListeners(){
+    for(let i = 0;i<buttonArray.length;i++){
+        document.getElementById(buttonArray[i]).addEventListener("click", function(){
+            openModal(this.id);
+        });
+        document.getElementById(buttonArray[i]+"-1").addEventListener("click", function(){
+            openModal(this.id);
+        });
+    }
+    window.onclick = function(event) {
+        console.log(event.target.id);
+      if (event.target.id == "fileModal" || event.target.id == "codeModal" || event.target.id == "messageModal" || event.target.id == "imageModal") {
+        document.getElementById(event.target.id).style.display = "none";
+      }
+    }
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+
+function openModal(modal){
+    console.log(modal);
+    if(modal == "files" || modal == "files-1"){
+        document.getElementById('fileModal').style.display = "block";
+    }
+    if(modal == "message" || modal == "message-1"){
+        document.getElementById('messageModal').style.display = "block";
+    }
+    if(modal == "image" || modal == "image-1"){
+        document.getElementById('imageModal').style.display = "block";
+    }
+    if(modal == "code" || modal == "code-1"){
+        document.getElementById('codeModal').style.display = "block";
+    }
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+function closeModal(){
+
 }
