@@ -197,7 +197,6 @@ function addEventListeners(){
         });
     }
     window.onclick = function(event) {
-        console.log(event.target.id);
       if (event.target.id == "fileModal" || event.target.id == "codeModal" || event.target.id == "messageModal" || event.target.id == "imageModal") {
         document.getElementById(event.target.id).style.display = "none";
       }
